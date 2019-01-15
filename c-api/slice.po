@@ -16,17 +16,17 @@ msgstr ""
 
 #: ../Doc/c-api/slice.rst:6
 msgid "Slice Objects"
-msgstr ""
+msgstr "Objet slice"
 
 #: ../Doc/c-api/slice.rst:11
 msgid ""
 "The type object for slice objects.  This is the same as :class:`slice` in "
 "the Python layer."
-msgstr ""
+msgstr "L'objet type des objets slice. C'est la même chose que :class: slice dans la couche Python."
 
 #: ../Doc/c-api/slice.rst:17
 msgid "Return true if *ob* is a slice object; *ob* must not be *NULL*."
-msgstr ""
+msgstr "Renvoie vrai si *ob* est un objet slice ; *ob* ne doit pas être *NULL*."
 
 #: ../Doc/c-api/slice.rst:22
 msgid ""
@@ -35,30 +35,30 @@ msgid ""
 "the same names.  Any of the values may be *NULL*, in which case the ``None`` "
 "will be used for the corresponding attribute.  Return *NULL* if the new "
 "object could not be allocated."
-msgstr ""
+msgstr "Renvoie un nouvel objet slice avec les valeurs données. Les paramêtres *start*, *stop*, et *step* sont utilisées comme valeur des attributs de l'objet slide du même nom. N'importe laquelle de ces valeurs peut être *NULL*, auquel cas l'objet ``None`` sera utilié pour les attributs correspondants. Renvoie *NULL* si le nouvel objet ne peut pas être alloué."
 
 #: ../Doc/c-api/slice.rst:31
 msgid ""
 "Retrieve the start, stop and step indices from the slice object *slice*, "
 "assuming a sequence of length *length*. Treats indices greater than *length* "
 "as errors."
-msgstr ""
+msgstr "Récupère les indices start, stop et step de l'objet slice *slice*, en supposant une séquence de longueur *length*. Traite les indices supérieur à *length* comme des erreurs."
 
 #: ../Doc/c-api/slice.rst:35
 msgid ""
 "Returns ``0`` on success and ``-1`` on error with no exception set (unless "
 "one of the indices was not :const:`None` and failed to be converted to an "
 "integer, in which case ``-1`` is returned with an exception set)."
-msgstr ""
+msgstr "Renvoie ``0`` en cas de réussite ou ``-1`` en cas d'erreur sans exception définie (sauf si l'un des indices n'était pas :const:`None` et n'a pas pu être converti en un entier, auquel cas ``-1`` est renvoyé avec une exception définie)."
 
 #: ../Doc/c-api/slice.rst:39
 msgid "You probably do not want to use this function."
-msgstr ""
+msgstr "Vous ne voulez probablement pas utiliser cette fonction."
 
 #: ../Doc/c-api/slice.rst:41 ../Doc/c-api/slice.rst:72
 msgid ""
 "The parameter type for the *slice* parameter was ``PySliceObject*`` before."
-msgstr ""
+msgstr "Le paramètre type du paramètre slice était auparavant ``PySliceObject*``."
 
 #: ../Doc/c-api/slice.rst:48
 msgid ""
@@ -67,22 +67,22 @@ msgid ""
 "length *length*, and store the length of the slice in *slicelength*.  Out of "
 "bounds indices are clipped in a manner consistent with the handling of "
 "normal slices."
-msgstr ""
+msgstr "Peut être utilisé à la place de :c:func:`PySlice_GetIndices`. Récupère les indices start, stop et step de l'objet slice *slice*, en supposant une séquence de longueur *length*, et enregistre la longueur de la slice dans *slicelength*. Les indices hors des "
 
 #: ../Doc/c-api/slice.rst:54
 msgid "Returns ``0`` on success and ``-1`` on error with exception set."
-msgstr ""
+msgstr "Renvoie ``0`` en cas de réussite et ``-1`` en cas d'erreur avec une exception définie."
 
 #: ../Doc/c-api/slice.rst:57
 msgid ""
 "This function is considered not safe for resizable sequences. Its invocation "
 "should be replaced by a combination of :c:func:`PySlice_Unpack` and :c:func:"
 "`PySlice_AdjustIndices` where ::"
-msgstr ""
+msgstr "Cette fonction est considérée non-sure pour les séquence redimentionnables. Son invocation devrait être remplacée par une combinaison de :c:func:`PySlice_Unpack` et :c:func:`PySlice_AdjustIndices` où ::"
 
 #: ../Doc/c-api/slice.rst:65
 msgid "is replaced by ::"
-msgstr ""
+msgstr "est remplacé par ::"
 
 #: ../Doc/c-api/slice.rst:76
 msgid ""
@@ -91,14 +91,14 @@ msgid ""
 "PySlice_GetIndicesEx` is implemented as a macro using :c:func:`!"
 "PySlice_Unpack` and :c:func:`!PySlice_AdjustIndices`. Arguments *start*, "
 "*stop* and *step* are evaluated more than once."
-msgstr ""
+msgstr "Si ``Py_LIMITED_API`` n'est pas défini, ou est définie à une valeur entre ``0x03050400`` et ``0x03060000`` (non-inclus), ou supérieure ou égale à ``0x03060100``, :c:func:`!PySlice_GetIndicesEx` est implementé en tant que macro en utilisant :c:func:`!PySlice_Unpack` et :c:func:`!PySlice_AdjustIndices`. Les arguments *start*, *stop* et *step* sont évalués plus d'une fois."
 
 #: ../Doc/c-api/slice.rst:83
 msgid ""
 "If ``Py_LIMITED_API`` is set to the value less than ``0x03050400`` or "
 "between ``0x03060000`` and ``0x03060100`` (not including) :c:func:`!"
 "PySlice_GetIndicesEx` is a deprecated function."
-msgstr ""
+msgstr "Si ``Py_LIMITED_API`` est défini à une valeur inférieure à ``0x03050400``, ou entre ``0x03060000`` et ``0x03060100`` (exclus), :c:func:`!PySlice_GetIndicesEx` est une fonction dépréciée."
 
 #: ../Doc/c-api/slice.rst:91
 msgid ""
@@ -107,32 +107,32 @@ msgid ""
 "``PY_SSIZE_T_MAX``, silently boost the start and stop values less than "
 "``PY_SSIZE_T_MIN`` to ``PY_SSIZE_T_MIN``, and silently boost the step values "
 "less than ``-PY_SSIZE_T_MAX`` to ``-PY_SSIZE_T_MAX``."
-msgstr ""
+msgstr "Extrait les données membres start, stop et step de l'objet slice comme des entiers C. TODO"
 
 #: ../Doc/c-api/slice.rst:97
 msgid "Return ``-1`` on error, ``0`` on success."
-msgstr ""
+msgstr "Renvoie ``-1`` en cas d'erreur, ``0`` en cas de réussite."
 
 #: ../Doc/c-api/slice.rst:104
 msgid ""
 "Adjust start/end slice indices assuming a sequence of the specified length. "
 "Out of bounds indices are clipped in a manner consistent with the handling "
 "of normal slices."
-msgstr ""
+msgstr "Ajuste les indices start/end pour une séquence de la taille spécifiée. Les indices hors des bornes sont raccourci d'une manière cohérente avec la manipulation de slices normales."
 
 #: ../Doc/c-api/slice.rst:108
 msgid ""
 "Return the length of the slice.  Always successful.  Doesn't call Python "
 "code."
-msgstr ""
+msgstr "Renvoie la longueur de la slice. Réussit toujours. N'appelle pas de code Python."
 
 #: ../Doc/c-api/slice.rst:115
 msgid "Ellipsis Object"
-msgstr ""
+msgstr "Objet ellipsis"
 
 #: ../Doc/c-api/slice.rst:120
 msgid ""
 "The Python ``Ellipsis`` object.  This object has no methods.  It needs to be "
 "treated just like any other object with respect to reference counts.  Like :"
 "c:data:`Py_None` it is a singleton object."
-msgstr ""
+msgstr "L'bojet ``Ellipsis`` de Python. Cet objet n'a pas de méthode. Il doit être traité comme n'importe quel autre objet en ce qui concerne le compteur de références. Comme :c:data:`Py_None`, c'est un objet singleton."
